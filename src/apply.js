@@ -1,7 +1,13 @@
 // 1. Find the maximum number in an array using apply
 // Parameters: numbers (array)
 // Test cases: maxNumber([3, 7, 1, 9]) => 9, maxNumber([-5, -1, -3]) => -1
-const maxNumber = function (numbers) {};
+export const maxNumber = function (numbers) {
+  return numbers.reduce.apply(numbers, [
+    (max, number) => {
+      return Math.max(max, number);
+    },
+  ]);
+};
 
 // 2. Concatenate two arrays
 // Parameters: array1, array2
